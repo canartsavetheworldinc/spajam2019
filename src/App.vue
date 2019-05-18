@@ -11,7 +11,7 @@
 <style>
 #app {
   min-height: 100%;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Noto Serif JP", "Noto Serif", "Lora", "serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
