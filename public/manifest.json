@@ -1,6 +1,6 @@
 {
-  "name": "spajam2019",
-  "short_name": "spajam2019",
+  "name": "ChainReport",
+  "short_name": "ChainReport",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "background_color": "#F4F5F4",
+  "theme_color": "#9CFAA0"
 }
