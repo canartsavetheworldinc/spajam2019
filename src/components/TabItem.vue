@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'Tab',
+  name: 'TabItem',
   props: {
     msg: String
   }
