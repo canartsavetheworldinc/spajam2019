@@ -5,7 +5,28 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    articles: new Array(30).fill(null)
+    articles: [
+      {
+        title: 'あっほー',
+        content: 'hoge'
+      },
+      {
+        title: 'いっほー',
+        content: 'hogehoge'
+      },
+      {
+        title: 'うっほー',
+        content: 'fuga'
+      },
+      {
+        title: 'えっほー',
+        content: 'fugafuga'
+      },
+      {
+        title: 'おっほー',
+        content: 'hogefuga'
+      }
+    ]
   },
   mutations: {
 

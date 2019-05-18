@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/about">
+  <router-link to="/catalog">
     <div class="checker-container">
       checker
     </div>
@@ -26,7 +26,7 @@ export default {
   padding: 12px;
   /* border: 1px solid orangered; */
   border-radius: 100px;
-  background-color: orange;
+  background-color: #ff14c0;
   color: white;
 }
 </style>

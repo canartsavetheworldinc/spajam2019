@@ -1,8 +1,7 @@
 <template>
   <div class="news-container">
-    <NewsItem class="news-item" :key="i" v-for="(article, i) in articles">
-      {{ i }}
-      {{ article }}
+    <NewsItem class="news-item" :key="i" :id="i" :title="article.title" v-for="(article, i) in articles">
+      {{ article.content }}
     </NewsItem>
   </div>
 </template>
@@ -29,7 +28,7 @@ export default {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-  background-color: greenyellow;
+  background-color: #f5f4f5;
 }
 .news-item:first-child {
   height: 180px;

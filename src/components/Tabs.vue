@@ -19,6 +19,6 @@ export default {
   display: flex;
   align-items: flex-end;
   height: 50px;
-  background-color: green;
+  background-color: #9cfaa0;
 }
 </style>

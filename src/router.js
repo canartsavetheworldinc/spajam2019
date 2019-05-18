@@ -7,6 +7,13 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  },
   routes: [
     {
       path: '/',
@@ -20,6 +27,16 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/news/:id',
+      name: 'detail',
+      component: () => import(/* webpackChunkName: "detail" */ './views/Detail.vue')
+    },
+    {
+      path: '/catalog',
+      name: 'catalog',
+      component: () => import(/* webpackChunkName: "catalog" */ './views/Catalog.vue')
     }
   ]
 })
