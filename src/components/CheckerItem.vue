@@ -1,6 +1,6 @@
 <template>
   <div class="checker-item-container" @click="click">
-    checker
+    <img :src="imgPath">
   </div>
 </template>
 
@@ -8,11 +8,15 @@
 export default {
   name: 'CheckerItem',
   props: {
-    onclick: Function
+    onclick: Function,
+    img: String
   },
   computed: {
     click () {
       return this.onclick || function () {}
+    },
+    imgPath () {
+      return this.img && `/img/checkers/${this.img}.png`
     }
   }
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="checker-container">
-    <CheckerItem class="checker-item" :onclick="click"></CheckerItem>
-    <CheckerItem class="checker-item"></CheckerItem>
-    <CheckerItem class="checker-item"></CheckerItem>
+    <CheckerItem class="checker-item" :onclick="click" :img="mainCheckerImg"></CheckerItem>
+    <CheckerItem class="checker-item" :img="checkerImgs[0]"></CheckerItem>
+    <CheckerItem class="checker-item" :img="checkerImgs[1]"></CheckerItem>
   </div>
 </template>
 
@@ -12,10 +12,16 @@ import CheckerItem from '@/components/CheckerItem'
 export default {
   name: 'Checker',
   props: {
-    msg: String
+    msg: String,
+    imgs: Array
   },
   components: {
     CheckerItem
+  },
+  data () {
+    return {
+      mainCheckerImg: 'catalog'
+    }
   },
   methods: {
     click () {
@@ -23,10 +29,19 @@ export default {
         const el = this.$children[i].$el
         if (!el.style.transform) {
           el.style.transform = `translateX(-${i * 130}%)`
+          el.style.filter = `drop-shadow(rgb(136, 136, 136) 1.5px 1.5px 0.2rem)`
+          this.mainCheckerImg = 'cross'
         } else {
           el.style.transform = ''
+          el.style.filter = ''
+          this.mainCheckerImg = 'catalog'
         }
       }
+    }
+  },
+  computed: {
+    checkerImgs () {
+      return this.imgs || []
     }
   }
 }
@@ -45,6 +60,7 @@ export default {
   background-color: #ff14c0;
   color: white;
   z-index: 1;
+  filter: drop-shadow(rgb(136, 136, 136) 1.5px -1.5px 0.2rem);
 }
 .checker-item {
   position: absolute;

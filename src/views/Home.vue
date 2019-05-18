@@ -2,7 +2,7 @@
   <div class="home-container">
     <Tabs class="tabs"></Tabs>
     <News class="news"></News>
-    <Checker class="checker"></Checker>
+    <Checker class="checker" :imgs="checkerImgs"></Checker>
   </div>
 </template>
 
@@ -18,6 +18,11 @@ export default {
     Tabs,
     News,
     Checker
+  },
+  data () {
+    return {
+      checkerImgs: ['pencil', 'share']
+    }
   }
 }
 </script>
