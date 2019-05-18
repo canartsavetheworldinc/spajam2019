@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="<%= BASE_URL %>img/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
     <title>ChainReport</title>
+
     <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+JP|Noto+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preload" href="/img/checkers/catalog.png" as="image">
-    <link rel="preload" href="/img/checkers/cross.png" as="image">
-    <link rel="preload" href="/img/checkers/pencil.png" as="image">
-    <link rel="preload" href="/img/checkers/share.png" as="image">
+    <link rel="stylesheet" href="<%= BASE_URL %>normalize.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>main.css">
+
+    <link rel="preload" href="<%= BASE_URL %>img/checkers/catalog.png" as="image">
+    <link rel="preload" href="<%= BASE_URL %>img/checkers/cross.png" as="image">
+    <link rel="preload" href="<%= BASE_URL %>img/checkers/pencil.png" as="image">
+    <link rel="preload" href="<%= BASE_URL %>img/checkers/share.png" as="image">
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but spajam2019 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but ChainReport doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
