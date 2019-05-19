@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <Tabs class="tabs"></Tabs>
+    <Tabs class="tabs" :data="tabsData"></Tabs>
     <News class="news"></News>
     <Checker class="checker" :imgs="checkerImgs"></Checker>
   </div>
@@ -21,6 +21,24 @@ export default {
   },
   data () {
     return {
+      tabsData: [
+        {
+          title: 'HOT',
+          color: '#ff1463'
+        },
+        {
+          title: 'IT',
+          color: '#3fcc00'
+        },
+        {
+          title: 'ビジネス',
+          color: '#ffce2b'
+        },
+        {
+          title: 'スポーツ',
+          color: '#384aff'
+        }
+      ],
       checkerImgs: ['pencil', 'share']
     }
   }
