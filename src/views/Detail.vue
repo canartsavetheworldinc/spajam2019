@@ -6,7 +6,7 @@
       <h1>{{ article.title }}</h1>
       <p>{{ article.text }}</p>
     </div>
-    <Checker class="checker" :imgs="checkerImgs" :funcs="[goToEditor]"></Checker>
+    <Checker class="checker" :imgs="checkerImgs" :funcs="[goToEditor, share]"></Checker>
   </div>
 </template>
 
@@ -36,6 +36,16 @@ export default {
   methods: {
     goToEditor () {
       this.$router.push({ path: `/news/${this.$route.params.id}/edit` })
+    },
+    share () {
+      if (!navigator.share) {
+        return
+      }
+      navigator.share({
+        url: window.href,
+        title: this.article.title,
+        text: this.article.text
+      })
     }
   },
   computed: {
