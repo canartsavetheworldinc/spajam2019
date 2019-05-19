@@ -25,11 +25,11 @@ export default {
       samplePictures: [
         '/sample_pictures/First_Child.jpeg',
         '/sample_pictures/kotonoha-6.png',
-        '/sample_pictures/kotonoha-5.png',
         '/sample_pictures/kotonoha-1.png',
         '/sample_pictures/kotonoha-2.png',
         '/sample_pictures/kotonoha-3.png',
-        '/sample_pictures/kotonoha-4.png'
+        '/sample_pictures/kotonoha-4.png',
+        '/sample_pictures/kotonoha-5.png'
       ],
       sampleReliability: [10000, 1000, 500]
     }

@@ -33,6 +33,6 @@ export default {
   padding: 12px;
   /* border: 1px solid orangered; */
   border-radius: 100px;
-  background-color: #9cfaa0;
+  background-color: #616161;
 }
 </style>

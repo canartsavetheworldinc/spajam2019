@@ -2,7 +2,7 @@
   <div class="home-container">
     <Tabs class="tabs" :data="tabsData"></Tabs>
     <News class="news"></News>
-    <Checker class="checker" :imgs="checkerImgs"></Checker>
+    <!-- <Checker class="checker" :imgs="checkerImgs"></Checker> -->
   </div>
 </template>
 
@@ -10,14 +10,14 @@
 // @ is an alias to /src
 import Tabs from '@/components/Tabs'
 import News from '@/components/News'
-import Checker from '@/components/Checker'
+// import Checker from '@/components/Checker'
 
 export default {
   name: 'Home',
   components: {
     Tabs,
-    News,
-    Checker
+    News
+    // Checker
   },
   data () {
     return {
@@ -38,8 +38,8 @@ export default {
           title: 'スポーツ',
           color: '#384aff'
         }
-      ],
-      checkerImgs: ['pencil', 'share']
+      ]
+      // checkerImgs: ['pencil', 'share']
     }
   }
 }

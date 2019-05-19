@@ -5,7 +5,7 @@
       <h1>{{ article.title }}</h1>
       <p>{{ article.content }}</p>
     </div>
-    <Checker class="checker" :imgs="checkerImgs"></Checker>
+    <Checker class="checker" :imgs="checkerImgs" :funcs="[goToEditor]"></Checker>
   </div>
 </template>
 
@@ -21,6 +21,11 @@ export default {
   data () {
     return {
       checkerImgs: ['pencil', 'share']
+    }
+  },
+  methods: {
+    goToEditor () {
+      this.$router.push({ path: `/news/${this.$route.params.id}/edit` })
     }
   },
   computed: {

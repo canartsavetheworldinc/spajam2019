@@ -34,6 +34,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "detail" */ './views/Detail.vue')
     },
     {
+      path: '/news/:id/edit',
+      name: 'editor',
+      component: () => import(/* webpackChunkName: "editor" */ './views/Editor.vue')
+    },
+    {
       path: '/catalog',
       name: 'catalog',
       component: () => import(/* webpackChunkName: "catalog" */ './views/Catalog.vue')

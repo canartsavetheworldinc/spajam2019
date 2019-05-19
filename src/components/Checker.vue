@@ -1,8 +1,8 @@
 <template>
   <div class="checker-container">
     <CheckerItem class="checker-item" :onclick="click" :img="mainCheckerImg"></CheckerItem>
-    <CheckerItem class="checker-item" :img="checkerImgs[0]"></CheckerItem>
-    <CheckerItem class="checker-item" :img="checkerImgs[1]"></CheckerItem>
+    <CheckerItem class="checker-item" :onclick="checkerFuncs[0]" :img="checkerImgs[0]"></CheckerItem>
+    <CheckerItem class="checker-item" :onclick="checkerFuncs[1]" :img="checkerImgs[1]"></CheckerItem>
   </div>
 </template>
 
@@ -12,8 +12,8 @@ import CheckerItem from '@/components/CheckerItem'
 export default {
   name: 'Checker',
   props: {
-    msg: String,
-    imgs: Array
+    imgs: Array,
+    funcs: Array
   },
   components: {
     CheckerItem
@@ -42,6 +42,9 @@ export default {
   computed: {
     checkerImgs () {
       return this.imgs || []
+    },
+    checkerFuncs () {
+      return this.funcs || []
     }
   }
 }
