@@ -1,7 +1,7 @@
 <template>
   <div class="tabs-container">
     <div class="tab">
-      <TabItem :key="i" v-for="(tab, i) in tabs">{{ tab }}</TabItem>
+      <TabItem :key="i" :color="tab.color" v-for="(tab, i) in tabs">{{ tab.title }}</TabItem>
     </div>
     <div class="neon"></div>
   </div>
@@ -13,14 +13,14 @@ import TabItem from '@/components/TabItem'
 export default {
   name: 'Tabs',
   props: {
-    msg: String
+    data: Array
   },
   components: {
     TabItem
   },
-  data () {
-    return {
-      tabs: ['HOT', 'IT', 'ビジネス', 'スポーツ']
+  computed: {
+    tabs () {
+      return this.data || []
     }
   }
 }
@@ -33,7 +33,7 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   height: 50px;
-  background-color: #9cfaa0;
+  background-color: #f4f5f4;
 }
 .tab {
   display: flex;
@@ -41,9 +41,12 @@ export default {
   height: 100%;
   overflow-x: scroll;
 }
+.tab::-webkit-scrollbar {
+  display: none;
+}
 .neon {
   width: 100%;
   height: 3px;
-  background-color: #ff14c0;
+  background-color: #ff1463;
 }
 </style>

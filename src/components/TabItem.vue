@@ -1,12 +1,24 @@
 <template>
-  <div class="tab-item-container">
-    <slot></slot>
+  <div class="tab-item-container" :style="style">
+    <!-- <img src="../assets/tab-3.svg"> -->
+    <!-- <div class="title"> -->
+      <slot></slot>
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TabItem'
+  name: 'TabItem',
+  props: {
+    color: String
+  },
+  computed: {
+    style () {
+      const color = this.color || '#ffffff'
+      return `background-color: ${color}`
+    }
+  }
 }
 </script>
 
@@ -22,5 +34,15 @@ export default {
   margin: 0 5px;
   padding-bottom: 4px;
   /* border: 1px solid black; */
+  font-family: 'Meiryo';
+  font-weight: bold;
+  color: white;
+}
+.title {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 </style>
