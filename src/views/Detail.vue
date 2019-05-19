@@ -5,15 +5,23 @@
       <h1>{{ article.title }}</h1>
       <p>{{ article.content }}</p>
     </div>
+    <Checker class="checker" :imgs="checkerImgs"></Checker>
   </div>
 </template>
 
 <script>
 import DetailHeader from '@/components/DetailHeader'
+import Checker from '@/components/Checker'
 
 export default {
   components: {
-    DetailHeader
+    DetailHeader,
+    Checker
+  },
+  data () {
+    return {
+      checkerImgs: ['pencil', 'share']
+    }
   },
   computed: {
     article () {
@@ -39,5 +47,10 @@ export default {
 }
 .content {
   margin-top: 70px;
+}
+.checker {
+  position: fixed;
+  bottom: 10%;
+  right: 7%;
 }
 </style>
