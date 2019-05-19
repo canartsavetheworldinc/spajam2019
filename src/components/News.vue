@@ -16,6 +16,7 @@ export default {
   },
   computed: {
     articles () {
+      this.$store.dispatch('fetch_articles')
       return this.$store.getters.articles
     }
   }

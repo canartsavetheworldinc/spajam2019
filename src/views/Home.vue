@@ -57,6 +57,7 @@ export default {
     width: 100%;
     min-height: 50px;
     height: 50px;
+    z-index: 100;
   }
   .news {
     flex-grow: 1;
