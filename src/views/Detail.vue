@@ -3,8 +3,8 @@
     <DetailHeader class="header"></DetailHeader>
     <div class="content">
       <div class="thumbnail" :style="style"></div>
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.text }}</p>
+      <h1>{{ article && article.title }}</h1>
+      <p>{{ article && article.text }}</p>
     </div>
     <Checker class="checker" :imgs="checkerImgs" :funcs="[goToEditor, share]"></Checker>
   </div>

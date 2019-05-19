@@ -16,8 +16,8 @@ export default new Vuex.Store({
     articles: []
   },
   mutations: {
-    update_articles (context) {
-      console.log(context)
+    update_articles (context, payload) {
+      context.articles = payload
     }
   },
   actions: {
@@ -31,7 +31,7 @@ export default new Vuex.Store({
           list.push(obj[key]['Block'][0])
         })
         // return list
-        context.state.articles = list
+        context.commit('update_articles', list)
       })
     }
   },
