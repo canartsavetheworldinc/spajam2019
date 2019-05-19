@@ -3,7 +3,7 @@
     <DetailHeader class="header"></DetailHeader>
     <div class="content">
       <h1>{{ article.title }}</h1>
-      <p>{{ article.content }}</p>
+      <p>{{ article.text }}</p>
     </div>
     <Checker class="checker" :imgs="checkerImgs"></Checker>
   </div>
