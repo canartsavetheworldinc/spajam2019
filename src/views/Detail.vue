@@ -38,14 +38,13 @@ export default {
       this.$router.push({ path: `/news/${this.$route.params.id}/edit` })
     },
     share () {
-      if (!navigator.share) {
-        return
+      if (navigator.share) {
+        navigator.share({
+          url: window.href,
+          title: this.article.title,
+          text: this.article.text
+        })
       }
-      navigator.share({
-        url: window.href,
-        title: this.article.title,
-        text: this.article.text
-      })
     }
   },
   computed: {
