@@ -61,7 +61,14 @@ export default new Vuex.Store({
     async fetch_articles (context) {
       // console.log(context)
       // context.state.articles = await fetch(`https://us-central1-spajam2019-9b8c1.cloudfunctions.net/news`)
-      console.log((await firebase.database().ref(`/News`).once('value')).val())
+      console.log((await firebase.database().ref(`/News`).once('value').then(data => {
+        let list = []
+        const obj = data.val()
+        Object.keys(obj).forEach(function (key) {
+          list.push(obj[key]['Block'][0])
+        })
+        return list
+      })))
     }
   },
   getters: {
